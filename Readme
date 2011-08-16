@@ -1,0 +1,15 @@
+run:
+
+bundle install
+
+# to see all rake tasks
+rake -T
+
+# to transfer haml layout to html
+rake haml
+
+# start server, serve content (but its not transforming scss!)
+rake preview
+
+# run compass and jekyll server
+foreman start

@@ -1,0 +1,103 @@
+@import "compass/reset";
+@import "compass";
+@import "custom_mixins";
+
+
+// pixel base, used to easily scale the page
+$pb: 1px;
+
+$color1: #eeeeee;
+$color2: #A00;
+$color2l: #FEE;
+$color1l: #fafafa;
+
+$ts: 16 * $pb;
+
+/** TODO: having the topline with dynamic height would be awesome **/
+@mixin rw-topline {
+  body{margin-top: 70 * $pb; }
+
+  #rw-topline-flow {
+	top: 50 * $pb;
+	position: fixed;
+	width: 100%;
+	
+	height: 20 * $pb;
+	@include background(linear-gradient(color-stops(white,rgba(255,255,255,0.2))));
+	//background-color: red;
+
+  }
+
+  #rw-topline {
+	height: 50 * $pb; 
+	width: 100%;
+	// background-color: $color1;
+
+	@include background(linear-gradient(color-stops(white, #eeeeee 97%,black)));
+
+	position: fixed;
+	top:0px;
+	left: 0px;
+
+	.title {
+	  // @include text-shadow(#000000);
+	  margin: 10 * $pb 25 * $pb 10*$pb 25*$pb;
+	  color: $color2;
+	  font-size: 30 * $pb;
+	  font-weight: bolder;
+
+	  a:hover {text-decoration: none;}
+	}
+
+	.nav {
+	  position: absolute;
+	  bottom: 12 * $pb;
+	  right: 25 * $pb;
+	}
+  }
+}
+
+@mixin rw-base {
+   @include rw-topline;
+
+   body {
+	   font-family: Calibri, Helvetica Neue, Helvetica, Arial, sans-serif;
+	   color: black;
+	   background-color: white;
+	   font-size: $ts;
+   }
+
+   h1{font-size: 1.8 * $ts; font-weight: bold; margin-bottom: $ts / 2; margin-top: $ts;}
+   h2{font-size: 1.1 * $ts;font-weight: bold;}
+
+   a {
+	color: $color2;
+	text-decoration: none;
+
+	&:hover {
+	  text-decoration: underline;
+	}
+   }
+
+   .site {
+	   width: 650 * $pb;
+	   text-align: justify;
+	   
+	   margin-left: auto;
+	   margin-right: auto;
+
+	   line-height: 1.6 * $ts;
+   }
+
+   pre {
+	border: 1px solid $color1;
+	background-color: $color1l;
+	padding: 0 (10 * $pb) 0 (10 * $pb);
+	line-height: $ts;
+	font-size: 0.8 * $ts;
+	margin-top: 10 * $pb;
+	margin-bottom: 10 * $pb;
+   }
+}
+
+

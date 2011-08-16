@@ -1,0 +1,27 @@
+@mixin text-shadow($color: #000000) {
+   text-shadow: $color 0 0 1px;
+   zoom:1;
+   filter: progid:DXImageTransform.Microsoft.Glow(Color=#{$color},Strength=1);
+   -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=-1, Color=#{$color})progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=-1, Color=#{$color})progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=-1, Color=#{$color})progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=0, Color=#{$color})progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1, Color=#{$color})progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#{$color})progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=1, Color=#{$color})progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=0, Color=#{$color})";
+}
+
+@mixin glowing-inboxes {
+   input {
+	  outline:none;
+	  transition: all 0.25s ease-in-out;
+	  -webkit-transition: all 0.25s ease-in-out;
+	  -moz-transition: all 0.25s ease-in-out;
+	  border-radius:3px;
+	  -webkit-border-radius:3px;
+	  -moz-border-radius:3px;
+	  border:1px solid rgba(0,0,0, 0.2);
+   }
+
+   input:focus {
+	  box-shadow: 0 0 5px rgba(0, 0, 255, 1);
+	  -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, 1); 
+	  -moz-box-shadow: 0 0 5px rgba(0, 0, 255, 1);
+	  border:1px solid rgba(0,0,255, 0.8); 
+   }
+}
+

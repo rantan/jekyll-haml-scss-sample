@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+    <meta content='Robin Wenglewski' name='author' />
+    <link href="http://feeds.feedburner.com/robin-wenglewski" rel="alternate" title="Robin Wenglewski" type="application/atom+xml" />
+    <link href='/stylesheets/screen.css' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <div id='rw-topline'>
+      <div class='title'>
+        <a href='/'>Robin Wenglewski</a>
+      </div>
+      <div class='nav'>
+        <a href='/'>Start</a>
+      </div>
+    </div>
+    <div id='rw-topline-flow'></div>
+    <div class='site'>
+      <div class='header'></div>
+      {{ content }}
+    </div>
+  </body>
+  <script type='text/javascript'>
+    //<![CDATA[
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22675280-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    //]]>
+  </script>
+</html>
